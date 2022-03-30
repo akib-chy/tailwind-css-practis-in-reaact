@@ -12,13 +12,13 @@ const Navbar = () => {
   ];
   const [open, setOpen] = useState(false);
   return (
-    <nav>
+    <nav className=" bg-indigo-200 py-3">
       <div onClick={() => setOpen(!open)} className="w-10 h-10 md:hidden">
         {open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>}
       </div>
       <ul
-        className={`md:flex justify-center absolute ${
-          open ? "top-6" : "top-[-120px]"
+        className={`md:flex justify-center absolute duration-500 ease-in md:static bg-indigo-200 w-full ${
+          open ? "top-10" : "top-[-180px]"
         }`}
       >
         {link.map((item) => (
